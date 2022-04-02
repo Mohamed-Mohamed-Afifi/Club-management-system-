@@ -10,7 +10,7 @@ package club;
  */
 public class Stadium {
     private String name;
-    private double size;
+    private String type_of_sport;
 
     public String getName() {
         return name;
@@ -20,12 +20,12 @@ public class Stadium {
         this.name = name;
     }
 
-    public double getSize() {
-        return size;
+    public String type_of_sport() {
+        return type_of_sport;
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    public void set_type_of_sport(String type_of_sport) {
+        this.type_of_sport = type_of_sport;
     }
     
 }

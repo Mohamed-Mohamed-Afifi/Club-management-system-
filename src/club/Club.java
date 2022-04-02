@@ -4,7 +4,8 @@
  */
 
 package club;
-
+import java.util.Vector;
+import java.lang.*;
 /**
  *
  * @author DELL 7510
@@ -20,11 +21,11 @@ public class Club {
         Sport sp1=new Sport();
         sp1.setName("Football");
         Sport sp2=new Sport();
-        sp1.setName("basketball");
+        sp2.setName("basketball");
         Sport sp3=new Sport();
-        sp1.setName("tennis");
+        sp3.setName("tennis");
         Sport sp4=new Sport();
-        sp1.setName("basketball");
+        sp4.setName("basketball");
         
 //      Add Members
         Members meb1=new Members();
@@ -57,12 +58,15 @@ public class Club {
         man1.add_member(meb1);        
 //      Club structure
         ClubStructure clb=new ClubStructure();
-        clb.add_event(ev1);
+//        clb.add_event(ev1);
         clb.setName("teachers club");
         clb.setAddress("Menouf,Cairo Egypt");
-        clb.add_manager(man1);
-        
-        
+//        clb.add_manager(man1);
+//        Output
+        System.out.println("The Name of Club is :"+clb.getName());
+        System.out.println("The Name of Manager is :"+man1.getName());
+        System.out.println("The Number of members is :"+man1.get_num_members());
+        man1.Print_members();
     }
 
 }

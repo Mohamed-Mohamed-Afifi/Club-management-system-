@@ -4,6 +4,7 @@
  */
 package club;
 
+import java.util.Enumeration;
 import java.util.Vector;
 
 /**
@@ -24,7 +25,18 @@ public class Manager extends Person{
         members.remove(me);
     }
     
-    
-    
+    public double get_num_members(){
+        return members.size();
+    }
+    public void Print_members(){
+     Enumeration en=members.elements();
+     int count=0;
+        while (en.hasMoreElements()) {
+            count++;
+            Members me =(Members) en.nextElement();
+            System.out.println("Member number "+ count+":"+ "\n" +" The Name :  " +me.getName()+ "\n" +" Id Number : " + me.getId());
+            me.get_played_sport();
+        }
+    }
     
 }
