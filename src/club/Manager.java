@@ -17,17 +17,19 @@ public class Manager extends Person{
     public Manager() {
         members=new Vector();          
     }
-    
+//  add Member by manager
     public void add_member(Members me){
         members.addElement(me);
     }
+//  remove Member by manager
     public void Remove_member(Members me){
         members.remove(me);
     }
-    
+//  number of members    
     public double get_num_members(){
         return members.size();
     }
+//  Member data    
     public void Print_members(){
      Enumeration en=members.elements();
      int count=0;

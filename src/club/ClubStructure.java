@@ -14,14 +14,19 @@ import java.util.Vector;
 public class ClubStructure {
     private String name;
     private String address;
+    
     private Vector events;
-    private Vector managers;
+    private Vector stades;
+    
     private Manager man;
+    private Stadium st;
+    
+//  When Club is created stadium and manager is found Composition relation
     public ClubStructure() {
-        Stadium st=new Stadium();
+        st=new Stadium();
         man=new Manager();
     }
-    
+//  Geter and Setter For name and address  
     public String getName() {
         return name;
     }
@@ -37,13 +42,15 @@ public class ClubStructure {
     public void setAddress(String address) {
         this.address = address;
     }
+//  Organize Event in club  [ev refer to Event class ==>set of event and set date of event]
     public void add_event(Events ev){
         events.addElement(ev);
     }
     public Enumeration get_event(){
         return events.elements();
     }
-    public void add_manager(Manager men){
-        managers.addElement(men);
+//  Add stade to club  
+    public void add_stadium(Stadium s){
+        stades.addElement(s);
     }
 }

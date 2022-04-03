@@ -21,6 +21,7 @@ public class Members extends Person{
 public void play_sport(Sport sp){
         sports.addElement(sp);
     }
+//  get Sport which member play on it
 public void get_played_sport(){
         Enumeration en=sports.elements();
         int count=0;
