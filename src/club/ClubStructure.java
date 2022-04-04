@@ -21,6 +21,8 @@ public class ClubStructure {
     private Manager man;
     private Stadium st;
     
+    private Vector Securities;
+    
 //  When Club is created stadium and manager is found Composition relation
     public ClubStructure() {
         st=new Stadium();
@@ -52,5 +54,15 @@ public class ClubStructure {
 //  Add stade to club  
     public void add_stadium(Stadium s){
         stades.addElement(s);
+    }
+    public Enumeration get_stades(){
+        return stades.elements();
+    }
+//  Add Security member
+    public void add_security(SecurityMember se){
+        Securities.addElement(se);
+    }
+    public Enumeration get_securites(){
+        return Securities.elements();
     }
 }
