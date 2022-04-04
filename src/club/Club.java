@@ -5,7 +5,7 @@
 
 package club;
 import java.util.Vector;
-import java.lang.*;
+import java.util.Scanner;
 /**
  *
  * @author DELL 7510
@@ -30,14 +30,14 @@ public class Club {
 //      Add Members
         Members meb1=new Members();
         meb1.setName("Mohamed Afifi");
-        meb1.setId("1800253");
+        meb1.setId(1800253);
         meb1.play_sport(sp1);
         meb1.play_sport(sp2);
         
 //      Add Members
         Members meb2=new Members();
         meb2.setName("Mohamed Elsayed");
-        meb2.setId("1800253");
+        meb2.setId(1800253);
         meb2.play_sport(sp3);
         meb2.play_sport(sp4);
         
@@ -57,9 +57,9 @@ public class Club {
 //      Add Manager
         Manager man1=new Manager();
         man1.setName("Mo 3fifi");
-        man1.setId("01145626715");
-        man1.add_member(meb2);
-        man1.add_member(meb1); 
+        man1.setId(01145626715);
+        man1.add_member(meb1);
+        man1.add_member(meb2); 
         
 //      Club structure
         ClubStructure clb=new ClubStructure();
@@ -69,13 +69,27 @@ public class Club {
 //          clb.add_stadium(stad2);
         
 
-
-//        Output
+        Vector ids=new Vector();
+        ids.addElement(meb1.getId());
+        ids.addElement(meb2.getId());
+        
+       
+//      Output
         System.out.println("The Name of Club is :"+clb.getName());
         System.out.println("The Name of Manager is :"+man1.getName());
         System.out.println("The Number of members is :"+man1.get_num_members());
         man1.Print_members();
         System.out.println("There is a Event at " +ev1.getData() +" Called :"+ ev1.getName());
+        
+        SecurityMember sec=new SecurityMember();
+        Scanner sc=new Scanner(System.in);
+        System.err.println("Please Enter Id to check :");
+        double id=sc.nextDouble();
+        if(sec.check_id(id, ids)){
+            System.err.println("This id is valid to enter the club");
+        }else{
+            System.err.println("This id is denay please renew your id");
+        }
     }
 
 }

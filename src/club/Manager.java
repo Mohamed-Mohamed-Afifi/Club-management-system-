@@ -12,7 +12,7 @@ import java.util.Vector;
  * @author DELL 7510
  */
 public class Manager extends Person{
-    private Vector members;
+    protected Vector members;
 
     public Manager() {
         members=new Vector();          

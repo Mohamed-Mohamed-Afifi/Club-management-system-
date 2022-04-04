@@ -10,7 +10,7 @@ package club;
  */
 public class Person {
     private String name;
-    private String id;
+    private double id;
 
     public String getName() {
         return name;
@@ -20,11 +20,11 @@ public class Person {
         this.name = name;
     }
 
-    public String getId() {
+    public double getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(double id) {
         this.id = id;
     }
     
