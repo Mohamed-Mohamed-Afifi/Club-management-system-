@@ -20,13 +20,14 @@ public class ClubStructure {
     
     private Manager man;
     private Stadium st;
+    private Park pr;
     
-    private Vector Securities;
     
 //  When Club is created stadium and manager is found Composition relation
     public ClubStructure() {
         st=new Stadium();
         man=new Manager();
+        pr=new Park();
     }
 //  Geter and Setter For name and address  
     public String getName() {
@@ -57,12 +58,5 @@ public class ClubStructure {
     }
     public Enumeration get_stades(){
         return stades.elements();
-    }
-//  Add Security member
-    public void add_security(SecurityMember se){
-        Securities.addElement(se);
-    }
-    public Enumeration get_securites(){
-        return Securities.elements();
     }
 }
