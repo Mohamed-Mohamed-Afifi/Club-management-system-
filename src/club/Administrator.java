@@ -11,10 +11,10 @@ import java.util.Vector;
  *
  * @author DELL 7510
  */
-public class Manager extends Person{
+public class Administrator extends Person{
     protected Vector members;
 
-    public Manager() {
+    public Administrator() {
         members=new Vector();          
     }
 //  add Member by manager

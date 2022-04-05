@@ -55,7 +55,7 @@ public class Club {
         ev1.setName("take mark");
         
 //      Add Manager
-        Manager man1=new Manager();
+        Administrator man1=new Administrator();
         man1.setName("Mo 3fifi");
         man1.setId(01145626715);
         man1.add_member(meb1);

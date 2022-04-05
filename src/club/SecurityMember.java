@@ -10,6 +10,7 @@ import java.util.Vector;
  * @author DELL 7510
  */
 public class SecurityMember extends Person{
+    
     public  boolean check_id(double s , Vector members_id ){
         Enumeration en=members_id.elements();
         while (en.hasMoreElements()) {

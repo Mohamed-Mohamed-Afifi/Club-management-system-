@@ -18,7 +18,7 @@ public class ClubStructure {
     private Vector events;
     private Vector stades;
     
-    private Manager man;
+    private Administrator man;
     private Stadium st;
     private Park pr;
     
@@ -26,7 +26,7 @@ public class ClubStructure {
 //  When Club is created stadium and manager is found Composition relation
     public ClubStructure() {
         st=new Stadium();
-        man=new Manager();
+        man=new Administrator();
         pr=new Park();
     }
 //  Geter and Setter For name and address  
